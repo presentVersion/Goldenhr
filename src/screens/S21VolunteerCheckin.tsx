@@ -99,31 +99,34 @@ export const S21VolunteerCheckin: React.FC = () => {
             </span>
           </div>
 
-          {/* 3D Crystal Defibrillator (AED) & Radar Visualization */}
-          <div className="relative rounded-2xl overflow-hidden glass-specular border border-rose-500/20 shadow-md p-3">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-rose-500 flex items-center gap-1.5">
+          {/* 3D Crystal Defibrillator (AED) & Radar Visualization (Unframed Hero Showcase) */}
+          <div className="relative rounded-3xl overflow-hidden glass-specular border border-rose-500/20 shadow-xl p-4 bg-gradient-to-b from-rose-500/10 via-amber-500/5 to-transparent">
+            <div className="flex items-center justify-between mb-3 px-1">
+              <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-rose-500 flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-rose-500 animate-ping" />
-                3D AED & 500m Radar Topography
+                3D AED Station & 500m Radar Topography
               </span>
-              <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold">
-                AED Unit Available
+              <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">
+                AED Unit Online
               </span>
             </div>
 
-            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-white/40 dark:border-white/10 group">
+            <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl border border-white/60 dark:border-white/15 bg-gradient-to-b from-rose-500/10 to-slate-900 group">
               <img
                 src="/assets/mivo-volunteer-aed-radar-3d.jpg"
                 alt="3D Crystal Defibrillator and 500m Radar Map"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute bottom-2.5 inset-x-2.5 flex items-center justify-between text-white text-[10px] font-mono">
-                <span className="bg-black/60 backdrop-blur-md px-2 py-0.5 rounded-full border border-white/20">
-                  Radius: 500m Pulse Grid
+
+              {/* Floating Non-Obscuring Stadium Pills */}
+              <div className="absolute bottom-3 left-3 z-10">
+                <span className="bg-slate-950/85 text-white backdrop-blur-xl px-3 py-1.5 rounded-full border border-white/20 shadow-xl text-xs font-mono font-bold">
+                  Radius: 500m Concentric Grid
                 </span>
-                <span className="bg-[#D4FF00] text-black font-black px-2 py-0.5 rounded-full shadow-sm">
-                  PADS READY
+              </div>
+              <div className="absolute bottom-3 right-3 z-10">
+                <span className="bg-[#D4FF00] text-slate-950 font-black px-3 py-1.5 rounded-full shadow-xl text-xs font-mono">
+                  PADS ARMED
                 </span>
               </div>
             </div>

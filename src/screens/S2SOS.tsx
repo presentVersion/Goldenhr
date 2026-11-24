@@ -52,7 +52,15 @@ export const S2SOS: React.FC = () => {
   const [locationName, setLocationName] = React.useState('Durgam Cheruvu Flyover Junction (±12 m)');
   const [isLandmarkPickerOpen, setIsLandmarkPickerOpen] = React.useState(false);
   const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [showAnatomicalScanner, setShowAnatomicalScanner] = React.useState(false);
+
+  const mappedZoneId =
+    emergencyType === 'chest_pain'
+      ? 'chest'
+      : emergencyType === 'unconscious'
+      ? 'head'
+      : emergencyType === 'breathing'
+      ? 'throat'
+      : 'spine';
 
   React.useEffect(() => {
     animateScreenEnter(containerRef.current);
@@ -220,32 +228,34 @@ export const S2SOS: React.FC = () => {
           onChange={setEmergencyType}
         />
 
-        {/* Anatomical Trauma Scanner Toggle */}
-        <div className="pt-1">
-          <button
-            type="button"
-            onClick={() => setShowAnatomicalScanner(!showAnatomicalScanner)}
-            className="w-full py-2.5 px-4 rounded-2xl bg-gradient-to-r from-rose-500/10 via-pink-500/5 to-amber-500/10 border border-rose-200/80 dark:border-rose-900/50 text-xs font-bold text-rose-700 dark:text-rose-300 flex items-center justify-between shadow-xs hover:shadow-sm transition-all"
-          >
-            <span className="flex items-center gap-1.5">
+        {/* 3D Anatomical Trauma Scanner (Always Visible Hero - Never Hidden in Dropdowns) */}
+        <div className="pt-2">
+          <div className="flex items-center justify-between mb-2 px-1">
+            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-rose-500 flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-rose-500 animate-ping" />
-              {showAnatomicalScanner ? 'Collapse 3D Body Scan' : 'Pinpoint Pain on 3D Body Scan (Mivo)'}
+              Live 3D Trauma Twin • Tap Hotspots to Target Pain
             </span>
-            <span className="text-[11px] font-black uppercase text-rose-500">
-              {showAnatomicalScanner ? '▲ Close' : '▼ Open 3D Scan'}
+            <span className="text-[10px] font-mono text-slate-400">
+              Active Zone: {mappedZoneId.toUpperCase()}
             </span>
-          </button>
+          </div>
 
-          {showAnatomicalScanner && (
-            <div className="mt-3 animate-fade-in">
-              <AnatomicalBodyScan
-                patientName="Patient Pain Assessment"
-                patientAge="Active Incident"
-                compact={true}
-                showTelemetryCards={false}
-              />
-            </div>
-          )}
+          <div className="w-full rounded-3xl overflow-hidden shadow-2xl border border-white/60 dark:border-white/10 bg-gradient-to-b from-white/80 via-white/40 to-transparent dark:from-slate-900/80 dark:via-slate-950/40 backdrop-blur-xl">
+            <AnatomicalBodyScan
+              patientName="Emergency Patient Scan"
+              patientAge="Active Trauma"
+              activeZoneId={mappedZoneId}
+              onZoneSelect={(zone) => {
+                setSeverityVal(zone.severity);
+                if (zone.category === 'cardiac') setEmergencyType('chest_pain');
+                else if (zone.category === 'cranial') setEmergencyType('unconscious');
+                else if (zone.category === 'respiratory') setEmergencyType('breathing');
+                else setEmergencyType('accident');
+              }}
+              compact={false}
+              showTelemetryCards={true}
+            />
+          </div>
         </div>
       </div>
 

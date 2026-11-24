@@ -211,35 +211,9 @@ export const AnatomicalBodyScan: React.FC<AnatomicalBodyScanProps> = ({
                   className="w-full h-full object-cover object-center filter saturate-110 contrast-105"
                   onError={() => setVisualMode('vector')}
                 />
-                
-                {/* Radiant Vignette Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-rose-950/20 pointer-events-none" />
 
-                {/* Leader line overlay on left: 7/10 throat pain, Moderate */}
-                <div className="absolute top-10 left-3 z-20 pointer-events-none">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-2xl font-black text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-                      {severityVal}
-                    </span>
-                    <span className="text-xs font-bold text-white/80">/10</span>
-                  </div>
-                  <div className="text-[11px] font-bold text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
-                    {activeZone.labelNote || activeZone.name}
-                  </div>
-                  <div className="mt-1 inline-block px-2 py-0.5 rounded-full bg-white/20 backdrop-blur-md border border-white/40 text-[9px] font-bold text-white uppercase tracking-wider">
-                    {severityVal >= 8 ? 'Critical' : severityVal >= 5 ? 'Moderate' : 'Mild'}
-                  </div>
-                </div>
-
-                {/* Leader line overlay on right: Cough analysis */}
-                <div className="absolute top-12 right-3 z-20 text-right pointer-events-none">
-                  <div className="text-[10px] font-bold text-white/90 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
-                    Acoustic Biometric
-                  </div>
-                  <div className="text-[9px] font-medium text-white/70">
-                    Next Scan 02:40
-                  </div>
-                </div>
+                {/* Subtle crystal rim light effect - Zero dark dimming */}
+                <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-white/10 dark:to-transparent pointer-events-none" />
 
                 {/* Hotspot Beacons for Trauma Zones */}
                 {DEFAULT_ZONES.map((zone) => {

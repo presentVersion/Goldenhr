@@ -110,37 +110,42 @@ export const S3SceneGuide: React.FC = () => {
       </div>
 
       {/* Main Guidance Card with Mivo Wave Arch */}
-      <div className="my-auto py-4 space-y-4">
-        {/* 3D Translucent Cardiac Resuscitation Torso Hero Visual */}
-        <div className="relative rounded-3xl overflow-hidden glass-specular border border-rose-500/20 shadow-xl bg-gradient-to-b from-rose-500/10 via-amber-500/5 to-transparent p-4 flex flex-col items-center">
-          <div className="w-full flex items-center justify-between mb-2 px-1">
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-rose-500 flex items-center gap-1.5">
+      <div className="my-auto py-4 space-y-6">
+        {/* Unconstrained 3D Cardiac Resuscitation Torso (Hero Sculpture - Zero Framelock) */}
+        <div className="relative flex flex-col items-center justify-center my-2">
+          {/* Radiant Amber/Rose Aura */}
+          <div className="absolute inset-0 w-72 h-72 mx-auto rounded-full bg-rose-500/25 blur-3xl pointer-events-none" />
+
+          {/* Floating Telemetry Pills - Top */}
+          <div className="relative z-10 w-full flex items-center justify-between px-2 mb-2">
+            <span className="px-3 py-1.5 rounded-full bg-white/90 dark:bg-slate-900/90 text-rose-600 dark:text-rose-400 font-mono text-[11px] font-black border border-rose-500/30 shadow-lg backdrop-blur-xl flex items-center gap-1.5">
               <span className={`w-2 h-2 rounded-full bg-rose-500 ${metronomeTick ? 'scale-150 animate-ping' : ''}`} />
-              3D Cardiac Pacing Scan (110 BPM)
+              3D Cardiac Compression Scan
             </span>
-            <span className="text-[10px] font-mono text-slate-400">
-              Thoracic Compression Zone
+            <span className="px-3 py-1.5 rounded-full bg-[#D4FF00] text-slate-950 font-mono text-[11px] font-black shadow-lg">
+              110 BPM LOCKED
             </span>
           </div>
 
-          <div className="relative w-full max-w-[320px] aspect-square rounded-2xl overflow-hidden shadow-inner border border-white/40 dark:border-white/10 group">
+          {/* Unframed 3D Asset in Full Glory */}
+          <div className="relative w-full max-w-[400px] aspect-square rounded-3xl overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-[1.02] border border-white/60 dark:border-white/15">
             <img
               src="/assets/mivo-cardiac-cpr-3d.jpg"
               alt="3D Translucent Cardiac Resuscitation Torso"
-              className={`w-full h-full object-cover transition-transform duration-500 ${
-                metronomeTick ? 'scale-105 filter brightness-110' : 'scale-100'
+              className={`w-full h-full object-cover transition-all duration-300 ${
+                metronomeTick ? 'scale-105 filter brightness-110 contrast-105' : 'scale-100'
               }`}
             />
-            {/* Live Ripple Soundwave Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute bottom-3 inset-x-3 flex items-center justify-between text-white text-[11px] font-mono">
-              <span className="bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
-                Sternum Depth: 5.2 cm
-              </span>
-              <span className="bg-[#D4FF00] text-black font-black px-2.5 py-1 rounded-full shadow-sm">
-                RHYTHM LOCKED
-              </span>
-            </div>
+          </div>
+
+          {/* Floating Telemetry Pills - Bottom (Non-Obscuring) */}
+          <div className="relative z-10 w-full flex items-center justify-between px-2 -mt-4">
+            <span className="px-3.5 py-1.5 rounded-full bg-slate-950/85 text-white font-mono text-[11px] font-bold border border-white/20 shadow-xl backdrop-blur-xl">
+              Sternum Depth: 5.2 cm (Target 5-6 cm)
+            </span>
+            <span className="px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-slate-900/90 text-slate-900 dark:text-white font-mono text-[11px] font-bold border border-slate-200 dark:border-white/20 shadow-xl backdrop-blur-xl">
+              Thoracic Pacing: Optimal
+            </span>
           </div>
         </div>
 

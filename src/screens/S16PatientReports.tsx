@@ -221,19 +221,22 @@ export const S16PatientReports: React.FC = () => {
                 </span>
               </div>
 
-              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-inner border border-white/40 dark:border-white/10 group">
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/60 dark:border-white/15 bg-gradient-to-b from-rose-500/10 via-amber-500/5 to-slate-900/10 dark:from-slate-900 dark:to-slate-950 group">
                 <img
                   src="/assets/mivo-diagnostic-dossier-3d.jpg"
                   alt="3D Translucent Glass Diagnostic Dossier with Holographic ECG and Blood Vial"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-3 inset-x-3 flex items-center justify-between text-white text-[11px] font-mono">
-                  <span className="bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+
+                {/* Floating Telemetry Badges - Clean Floating Stadium Pills */}
+                <div className="absolute bottom-3 left-3 z-10">
+                  <span className="bg-slate-950/85 text-white backdrop-blur-xl px-3 py-1 rounded-full border border-white/20 shadow-xl text-[11px] font-mono font-bold">
                     O-NEG: 2 UNITS READY
                   </span>
-                  <span className="bg-[#D4FF00] text-black font-black px-2.5 py-1 rounded-full shadow-sm">
-                    12-LEAD STEMI
+                </div>
+                <div className="absolute bottom-3 right-3 z-10">
+                  <span className="bg-[#D4FF00] text-slate-950 font-black px-3 py-1 rounded-full shadow-xl text-[11px] font-mono">
+                    12-LEAD STEMI ACTIVE
                   </span>
                 </div>
               </div>

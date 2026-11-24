@@ -278,7 +278,7 @@ export const S14DoctorCaseBoard: React.FC = () => {
               </div>
             </MivoCard>
 
-            {/* Direct Doctor 3D Clinical Dossier (Merged into Doctor Page) */}
+            {/* Direct Doctor 3D Clinical Dossier & Visual Diagnostics */}
             <MivoCard waveArch="none" className="p-5 space-y-4 shadow-xl">
               <div className="flex items-center justify-between pb-2 border-b border-slate-200/80 dark:border-white/10">
                 <div className="flex items-center gap-2">
@@ -292,27 +292,44 @@ export const S14DoctorCaseBoard: React.FC = () => {
                 </span>
               </div>
 
-              {/* 3D WebGL Flap Glass Folder */}
-              <div className="flex flex-col items-center justify-center py-4 bg-gradient-to-b from-slate-950/5 via-rose-500/5 to-transparent dark:from-white/5 rounded-2xl border border-white/40 dark:border-white/10">
-                <span className="text-[10px] font-mono font-bold uppercase text-slate-400 mb-2">
-                  Click Flap to Open • Drag or Zoom Cards
-                </span>
-                <Folder
-                  label={`Patient ${activeCase.id}`}
-                  mode="flap"
-                  variant="glass"
-                  items={[
-                    { title: 'Cardiology Discharge 2024', description: 'Post-PCI STEMI' },
-                    { title: 'Diabetic HbA1c Panel', description: 'HbA1c 7.8% • Metformin' },
-                    { title: '12-Lead STEMI ECG Strip', description: 'V1-V4 Acute Elevation' },
-                    { title: 'Blood Crossmatch Record', description: 'O-Negative Rh-D' },
-                  ]}
-                  color="#f43f5e"
-                  paperColor="#ffffff"
-                  openOn="click"
-                  draggable={true}
-                  zoomOnClick={true}
-                />
+              {/* 3D WebGL Flap Glass Folder & 3D Dossier Visual */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 items-center py-2">
+                <div className="flex flex-col items-center justify-center p-3 bg-gradient-to-b from-slate-950/5 via-rose-500/5 to-transparent dark:from-white/5 rounded-2xl border border-white/40 dark:border-white/10">
+                  <span className="text-[10px] font-mono font-bold uppercase text-slate-400 mb-2">
+                    Interactive Flap Folder
+                  </span>
+                  <Folder
+                    label={`Case ${activeCase.id}`}
+                    mode="flap"
+                    variant="glass"
+                    items={[
+                      { title: 'Cardiology Discharge 2024', description: 'Post-PCI STEMI' },
+                      { title: 'Diabetic HbA1c Panel', description: 'HbA1c 7.8% • Metformin' },
+                      { title: '12-Lead STEMI ECG Strip', description: 'V1-V4 Acute Elevation' },
+                      { title: 'Blood Crossmatch Record', description: 'O-Negative Rh-D' },
+                    ]}
+                    color="#f43f5e"
+                    paperColor="#ffffff"
+                    openOn="click"
+                    draggable={true}
+                    zoomOnClick={true}
+                  />
+                </div>
+
+                {/* 3D Diagnostic Dossier Render */}
+                <div className="relative rounded-2xl overflow-hidden border border-white/50 dark:border-white/10 shadow-lg group">
+                  <img
+                    src="/assets/mivo-diagnostic-dossier-3d.jpg"
+                    alt="3D Translucent Diagnostic Dossier"
+                    className="w-full h-36 object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-slate-950/80 backdrop-blur-md text-[10px] font-mono text-white border border-white/20">
+                    DIAGNOSTIC DOSSIER
+                  </div>
+                  <div className="absolute bottom-2 right-2 px-2 py-0.5 rounded-full bg-[#D4FF00] text-black text-[10px] font-mono font-black">
+                    EMR SYNCED
+                  </div>
+                </div>
               </div>
 
               {/* Extracted Clinical Biometrics (Zero Gatekeeping for Doctor) */}
@@ -324,11 +341,34 @@ export const S14DoctorCaseBoard: React.FC = () => {
                   </span>
                 </div>
 
-                <div className="space-y-1.5">
-                  <span className="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">
-                    Active Medications in Transit:
-                  </span>
-                  <div className="flex flex-wrap gap-1.5">
+                {/* 3D Jelly Medications Showcase Card */}
+                <div className="p-3.5 rounded-2xl bg-gradient-to-r from-rose-500/10 via-amber-500/10 to-indigo-500/10 border border-white/40 dark:border-white/10 space-y-2.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider">
+                      Active In-Transit Medications (3D Jelly Formulations):
+                    </span>
+                    <span className="px-2 py-0.5 rounded-full bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 text-[10px] font-bold">
+                      Verified
+                    </span>
+                  </div>
+
+                  <div className="relative w-full h-28 rounded-xl overflow-hidden border border-white/50 dark:border-white/10 shadow-sm group">
+                    <img
+                      src="/assets/mivo-jelly-medications.jpg"
+                      alt="3D Translucent Jelly Capsules and Medications"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute bottom-2 inset-x-2 flex items-center justify-between text-white text-[10px] font-mono font-bold">
+                      <span className="bg-slate-950/80 backdrop-blur-md px-2 py-0.5 rounded-full border border-white/20">
+                        METFORMIN 150mg • ASPIRIN 75mg
+                      </span>
+                      <span className="bg-emerald-500 text-white px-2 py-0.5 rounded-full">
+                        ACTIVE
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-1.5 pt-1">
                     <MivoPillTag label="Ticagrelor 90mg bd" variant="frosted" />
                     <MivoPillTag label="Aspirin 75mg" variant="amber" />
                     <MivoPillTag label="Atorvastatin 80mg" variant="lime" />

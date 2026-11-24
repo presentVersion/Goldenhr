@@ -242,55 +242,54 @@ export const S8ParamedicLiveCase: React.FC = () => {
                   Active Clinical Medications (3D Jelly Formulations)
                 </h4>
               </div>
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+              <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">
                 3 Verified Active
               </span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
-              {/* Asset Item 1 */}
-              <div className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group bg-slate-950/5 dark:bg-white/5 p-3 flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-white/60 dark:border-white/20 shadow-sm">
-                  <img
-                    src="/assets/mivo-jelly-medications.jpg"
-                    alt="Jelly Metformin Lozenge"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
+            {/* Unconstrained 3D Jelly Medications Hero Visual Showcase */}
+            <div className="relative w-full aspect-[16/7] rounded-2xl overflow-hidden border border-white/60 dark:border-white/20 shadow-lg group">
+              <img
+                src="/assets/mivo-jelly-medications.jpg"
+                alt="3D Translucent Jelly Capsules and Lozenges"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute top-2.5 left-2.5 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-white text-[10px] font-mono font-bold border border-white/20 shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-[#D4FF00]" />
+                TRANSLUCENT GELATIN CAPLETS
+              </div>
+              <div className="absolute bottom-2.5 inset-x-2.5 flex items-center justify-between text-white text-[10px] font-mono font-bold">
+                <span className="bg-slate-950/85 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 shadow-sm">
+                  METFORMIN 150mg • IBUPROFEN 400mg
+                </span>
+                <span className="bg-emerald-500 text-white px-2.5 py-1 rounded-full shadow-sm">
+                  SALBUTAMOL 2.5mg NEB
+                </span>
+              </div>
+            </div>
+
+            {/* Tactile Pills Row Below Showcase */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1">
+              <div className="p-2.5 rounded-xl bg-slate-950/5 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-between">
                 <div>
                   <span className="text-xs font-black text-slate-900 dark:text-white block">Metformin</span>
-                  <span className="text-[10px] text-slate-500">150 mg • Oral Lozenge</span>
+                  <span className="text-[10px] text-slate-500">150 mg • Lozenge</span>
                 </div>
+                <span className="w-2 h-2 rounded-full bg-rose-500" />
               </div>
-
-              {/* Asset Item 2 */}
-              <div className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group bg-slate-950/5 dark:bg-white/5 p-3 flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-white/60 dark:border-white/20 shadow-sm">
-                  <img
-                    src="/assets/mivo-jelly-medications.jpg"
-                    alt="Amber Ibuprofen Capsule"
-                    className="w-full h-full object-cover object-right group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
+              <div className="p-2.5 rounded-xl bg-slate-950/5 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-between">
                 <div>
                   <span className="text-xs font-black text-slate-900 dark:text-white block">Ibuprofen</span>
-                  <span className="text-[10px] text-slate-500">400 mg • Amber Capsule</span>
+                  <span className="text-[10px] text-slate-500">400 mg • Amber</span>
                 </div>
+                <span className="w-2 h-2 rounded-full bg-amber-500" />
               </div>
-
-              {/* Asset Item 3 */}
-              <div className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-white/10 group bg-slate-950/5 dark:bg-white/5 p-3 flex items-center gap-3">
-                <div className="w-12 h-12 rounded-xl overflow-hidden shrink-0 border border-white/60 dark:border-white/20 shadow-sm">
-                  <img
-                    src="/assets/mivo-jelly-medications.jpg"
-                    alt="Sapphire Syrup Droplet"
-                    className="w-full h-full object-cover object-bottom group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
+              <div className="p-2.5 rounded-xl bg-slate-950/5 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-between">
                 <div>
                   <span className="text-xs font-black text-slate-900 dark:text-white block">Salbutamol</span>
-                  <span className="text-[10px] text-slate-500">2.5 mg • Nebulized</span>
+                  <span className="text-[10px] text-slate-500">2.5 mg • Neb</span>
                 </div>
+                <span className="w-2 h-2 rounded-full bg-indigo-500" />
               </div>
             </div>
           </MivoCard>
