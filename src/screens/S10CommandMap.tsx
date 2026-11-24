@@ -322,38 +322,70 @@ export const S10CommandMap: React.FC = () => {
 
           {/* Sticky Tactical Fleet & Dispatch Bar (Direct Dr+ Reference Image 2) */}
           <div className="mt-3 p-4 rounded-3xl glass-specular flex flex-col gap-3">
-            {/* Choose Ambulance Section */}
-            <div className="flex flex-wrap items-center justify-between gap-2">
-              <span className="text-xs font-black text-slate-700 dark:text-slate-300 uppercase tracking-wider">
-                Choose Ambulance:
-              </span>
-              <div className="flex gap-2">
+            {/* Choose Ambulance Section with Visual 3D Cards (Direct Mivo Spec) */}
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-black text-slate-800 dark:text-slate-200 uppercase tracking-wider">
+                  Choose Ambulance
+                </span>
+                <span className="text-[10px] text-rose-500 font-mono font-bold">12 Free in Sector</span>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                {/* Cardiohelp Heli Card */}
                 <button
                   type="button"
                   onClick={() => setVehicleType('heli')}
-                  className={`px-3.5 py-2 rounded-2xl text-xs font-black flex items-center gap-2 transition-all ${
+                  className={`p-3 rounded-2xl flex flex-col items-center justify-between transition-all border text-left ${
                     vehicleType === 'heli'
-                      ? 'bg-amber-400 text-slate-950 shadow-md shadow-amber-400/30 ring-2 ring-amber-400/50'
-                      : 'bg-white/60 dark:bg-slate-800/60 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10'
+                      ? 'bg-gradient-to-b from-amber-100 to-amber-200/80 dark:from-amber-950/60 dark:to-amber-900/40 border-amber-400 shadow-md ring-2 ring-amber-400/50'
+                      : 'bg-white/70 dark:bg-slate-800/60 border-slate-200 dark:border-white/10 hover:border-amber-300'
                   }`}
                 >
-                  <Plane className="w-4 h-4" />
-                  <span>Cardiohelp Heli</span>
-                  <span className="text-[10px] opacity-80 font-normal">3 Free</span>
+                  <div className="w-full h-16 rounded-xl overflow-hidden mb-2 bg-amber-500/10 flex items-center justify-center relative">
+                    <img
+                      src="/assets/mivo-ambulance-transit-3d.jpg"
+                      alt="Cardiohelp Air Evacuation Helicopter"
+                      className="w-full h-full object-cover object-right"
+                    />
+                    <div className="absolute top-1 left-1 bg-black/60 text-white text-[9px] font-mono px-1.5 py-0.5 rounded-full">
+                      AIR EVAC
+                    </div>
+                  </div>
+                  <div className="w-full flex items-center justify-between text-xs">
+                    <span className="font-black text-slate-900 dark:text-white">Cardiohelp</span>
+                    <span className="text-[10px] font-bold text-amber-700 dark:text-amber-300 bg-amber-500/20 px-1.5 py-0.5 rounded-full">
+                      3 Free
+                    </span>
+                  </div>
                 </button>
 
+                {/* Cardiohelp Ground Mobile ICU Card */}
                 <button
                   type="button"
                   onClick={() => setVehicleType('ambulance')}
-                  className={`px-3.5 py-2 rounded-2xl text-xs font-black flex items-center gap-2 transition-all ${
+                  className={`p-3 rounded-2xl flex flex-col items-center justify-between transition-all border text-left ${
                     vehicleType === 'ambulance'
-                      ? 'bg-rose-500 text-white shadow-md shadow-rose-500/30 ring-2 ring-rose-500/50'
-                      : 'bg-white/60 dark:bg-slate-800/60 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/10'
+                      ? 'bg-gradient-to-b from-rose-100 to-rose-200/80 dark:from-rose-950/60 dark:to-rose-900/40 border-rose-500 shadow-md ring-2 ring-rose-500/50'
+                      : 'bg-white/70 dark:bg-slate-800/60 border-slate-200 dark:border-white/10 hover:border-rose-300'
                   }`}
                 >
-                  <Truck className="w-4 h-4" />
-                  <span>Cardiohelp Mobile ICU</span>
-                  <span className="text-[10px] opacity-80 font-normal">1 Free</span>
+                  <div className="w-full h-16 rounded-xl overflow-hidden mb-2 bg-rose-500/10 flex items-center justify-center relative">
+                    <img
+                      src="/assets/mivo-ambulance-transit-3d.jpg"
+                      alt="Cardiohelp Ground Mobile ICU Ambulance"
+                      className="w-full h-full object-cover object-left"
+                    />
+                    <div className="absolute top-1 left-1 bg-black/60 text-white text-[9px] font-mono px-1.5 py-0.5 rounded-full">
+                      ICU GROUND
+                    </div>
+                  </div>
+                  <div className="w-full flex items-center justify-between text-xs">
+                    <span className="font-black text-slate-900 dark:text-white">Cardiohelp</span>
+                    <span className="text-[10px] font-bold text-rose-700 dark:text-rose-300 bg-rose-500/20 px-1.5 py-0.5 rounded-full">
+                      1 Free
+                    </span>
+                  </div>
                 </button>
               </div>
             </div>

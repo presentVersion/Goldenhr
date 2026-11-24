@@ -99,6 +99,36 @@ export const S21VolunteerCheckin: React.FC = () => {
             </span>
           </div>
 
+          {/* 3D Crystal Defibrillator (AED) & Radar Visualization */}
+          <div className="relative rounded-2xl overflow-hidden glass-specular border border-rose-500/20 shadow-md p-3">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-rose-500 flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-rose-500 animate-ping" />
+                3D AED & 500m Radar Topography
+              </span>
+              <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold">
+                AED Unit Available
+              </span>
+            </div>
+
+            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-white/40 dark:border-white/10 group">
+              <img
+                src="/assets/mivo-volunteer-aed-radar-3d.jpg"
+                alt="3D Crystal Defibrillator and 500m Radar Map"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-2.5 inset-x-2.5 flex items-center justify-between text-white text-[10px] font-mono">
+                <span className="bg-black/60 backdrop-blur-md px-2 py-0.5 rounded-full border border-white/20">
+                  Radius: 500m Pulse Grid
+                </span>
+                <span className="bg-[#D4FF00] text-black font-black px-2 py-0.5 rounded-full shadow-sm">
+                  PADS READY
+                </span>
+              </div>
+            </div>
+          </div>
+
           <div className="space-y-1">
             <div className="text-lg font-black text-slate-900 dark:text-white">
               {activeEmergency?.location_name || 'Durgam Cheruvu Flyover Junction'}

@@ -177,6 +177,41 @@ export const S4LiveTracker: React.FC = () => {
         </div>
       )}
 
+      {/* 3D Aerodynamic Emergency ICU & Transit Speed Unit */}
+      <div className="relative rounded-3xl overflow-hidden glass-specular border border-rose-500/20 shadow-xl bg-gradient-to-b from-rose-500/10 via-amber-500/5 to-transparent p-4">
+        <div className="flex items-center justify-between mb-3 px-1">
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping" />
+            <span className="text-xs font-mono font-black uppercase tracking-wider text-rose-500">
+              3D Rapid Transit Evacuation Unit
+            </span>
+          </div>
+          <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+            Green Corridor Active
+          </span>
+        </div>
+
+        <div className="relative w-full h-48 rounded-2xl overflow-hidden shadow-inner border border-white/40 dark:border-white/10 group">
+          <img
+            src="/assets/mivo-ambulance-transit-3d.jpg"
+            alt="3D Emergency ICU Ambulance & Transit Unit"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
+
+          {/* Overlaid Telemetry Metrics */}
+          <div className="absolute bottom-3 inset-x-3 flex items-center justify-between text-white text-xs font-mono">
+            <div className="flex items-center gap-2 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20">
+              <Gauge className="w-3.5 h-3.5 text-amber-400" />
+              <span>Speed: 68 km/h</span>
+            </div>
+            <div className="bg-[#D4FF00] text-black font-black px-3 py-1.5 rounded-full shadow-md text-[11px]">
+              CARDIOHELP AIR & GROUND
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Live Interactive Map with Full Route (Reference Image 3) */}
       <div className="space-y-2">
         <div className="rounded-3xl overflow-hidden border border-slate-200 dark:border-white/10 shadow-lg relative h-64 bg-slate-950/5">

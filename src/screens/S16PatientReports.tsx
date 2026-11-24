@@ -170,40 +170,77 @@ export const S16PatientReports: React.FC = () => {
         </MivoCard>
       ) : (
         <div className="space-y-6">
-          {/* 3D Interactive WebGL Flap Glass Folder Dossier */}
-          <div className="flex flex-col items-center justify-center p-6 rounded-3xl glass-specular border border-rose-500/20 overflow-hidden shadow-xl bg-gradient-to-b from-white/40 via-white/10 to-transparent dark:from-slate-900/40 dark:via-slate-950/20">
-            <div className="flex items-center justify-between w-full mb-3 px-2">
-              <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping" />
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-rose-500">
-                  3D Interactive Clinical Dossier (WebGL Refraction)
+          {/* 3D Interactive WebGL Flap Glass Folder Dossier & 3D Octane Render Preview */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            {/* Left: 3D Interactive WebGL Flap Glass Folder (7 cols) */}
+            <div className="lg:col-span-7 flex flex-col justify-between p-6 rounded-3xl glass-specular border border-rose-500/20 overflow-hidden shadow-xl bg-gradient-to-b from-white/40 via-white/10 to-transparent dark:from-slate-900/40 dark:via-slate-950/20">
+              <div className="flex items-center justify-between w-full mb-3 px-1">
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping" />
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-rose-500">
+                    3D Interactive Clinical Dossier (WebGL Refraction)
+                  </span>
+                </div>
+                <span className="text-[11px] font-mono text-slate-400">
+                  Click to Open Flap • Drag or Zoom Cards
                 </span>
               </div>
-              <span className="text-[11px] font-mono text-slate-400">
-                Click to Open Flap • Drag or Zoom Cards
-              </span>
+
+              <div className="flex items-center justify-center py-6 min-h-[300px]">
+                <Folder
+                  label="GH-8812 Dossier"
+                  mode="flap"
+                  variant="glass"
+                  items={[
+                    { title: 'Cardiology Discharge 2024', description: 'Post-PCI STEMI' },
+                    { title: 'Diabetic HbA1c Panel', description: 'HbA1c 7.8% • Metformin' },
+                    { title: '12-Lead STEMI ECG Strip', description: 'V1-V4 Acute Elevation' },
+                    { title: 'Blood Crossmatch Record', description: 'O-Negative Rh-D' },
+                  ]}
+                  color="#f43f5e"
+                  paperColor="#ffffff"
+                  openOn="click"
+                  draggable={true}
+                  zoomOnClick={true}
+                  onItemClick={(item: any, idx: number) => {
+                    if (reports[idx]) setSelectedReport(reports[idx]);
+                  }}
+                />
+              </div>
             </div>
 
-            <div className="flex items-center justify-center py-6 min-h-[300px]">
-              <Folder
-                label="GH-8812 Dossier"
-                mode="flap"
-                variant="glass"
-                items={[
-                  { title: 'Cardiology Discharge 2024', description: 'Post-PCI STEMI' },
-                  { title: 'Diabetic HbA1c Panel', description: 'HbA1c 7.8% • Metformin' },
-                  { title: '12-Lead STEMI ECG Strip', description: 'V1-V4 Acute Elevation' },
-                  { title: 'Blood Crossmatch Record', description: 'O-Negative Rh-D' },
-                ]}
-                color="#f43f5e"
-                paperColor="#ffffff"
-                openOn="click"
-                draggable={true}
-                zoomOnClick={true}
-                onItemClick={(item: any, idx: number) => {
-                  if (reports[idx]) setSelectedReport(reports[idx]);
-                }}
-              />
+            {/* Right: 3D Translucent Glass Diagnostic Dossier & ECG Asset (5 cols) */}
+            <div className="lg:col-span-5 flex flex-col justify-between p-5 rounded-3xl glass-specular border border-rose-500/20 shadow-xl bg-gradient-to-b from-rose-500/10 via-amber-500/5 to-transparent">
+              <div className="flex items-center justify-between mb-3 px-1">
+                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-rose-500 flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-rose-500 animate-ping" />
+                  Telemetry Hologram & O-Negative Blood Vial
+                </span>
+                <span className="text-[10px] font-mono text-slate-400">
+                  Verified Crossmatch
+                </span>
+              </div>
+
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-inner border border-white/40 dark:border-white/10 group">
+                <img
+                  src="/assets/mivo-diagnostic-dossier-3d.jpg"
+                  alt="3D Translucent Glass Diagnostic Dossier with Holographic ECG and Blood Vial"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-3 inset-x-3 flex items-center justify-between text-white text-[11px] font-mono">
+                  <span className="bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                    O-NEG: 2 UNITS READY
+                  </span>
+                  <span className="bg-[#D4FF00] text-black font-black px-2.5 py-1 rounded-full shadow-sm">
+                    12-LEAD STEMI
+                  </span>
+                </div>
+              </div>
+
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-2 px-1">
+                Octane 3D raytraced dossier scan with dynamic 12-lead telemetry ribbon and transfusion vial.
+              </p>
             </div>
           </div>
 

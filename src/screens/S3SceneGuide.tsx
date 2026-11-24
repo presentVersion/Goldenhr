@@ -110,7 +110,40 @@ export const S3SceneGuide: React.FC = () => {
       </div>
 
       {/* Main Guidance Card with Mivo Wave Arch */}
-      <div className="my-auto py-6">
+      <div className="my-auto py-4 space-y-4">
+        {/* 3D Translucent Cardiac Resuscitation Torso Hero Visual */}
+        <div className="relative rounded-3xl overflow-hidden glass-specular border border-rose-500/20 shadow-xl bg-gradient-to-b from-rose-500/10 via-amber-500/5 to-transparent p-4 flex flex-col items-center">
+          <div className="w-full flex items-center justify-between mb-2 px-1">
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-rose-500 flex items-center gap-1.5">
+              <span className={`w-2 h-2 rounded-full bg-rose-500 ${metronomeTick ? 'scale-150 animate-ping' : ''}`} />
+              3D Cardiac Pacing Scan (110 BPM)
+            </span>
+            <span className="text-[10px] font-mono text-slate-400">
+              Thoracic Compression Zone
+            </span>
+          </div>
+
+          <div className="relative w-full max-w-[320px] aspect-square rounded-2xl overflow-hidden shadow-inner border border-white/40 dark:border-white/10 group">
+            <img
+              src="/assets/mivo-cardiac-cpr-3d.jpg"
+              alt="3D Translucent Cardiac Resuscitation Torso"
+              className={`w-full h-full object-cover transition-transform duration-500 ${
+                metronomeTick ? 'scale-105 filter brightness-110' : 'scale-100'
+              }`}
+            />
+            {/* Live Ripple Soundwave Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute bottom-3 inset-x-3 flex items-center justify-between text-white text-[11px] font-mono">
+              <span className="bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20">
+                Sternum Depth: 5.2 cm
+              </span>
+              <span className="bg-[#D4FF00] text-black font-black px-2.5 py-1 rounded-full shadow-sm">
+                RHYTHM LOCKED
+              </span>
+            </div>
+          </div>
+        </div>
+
         <MivoCard waveArch="top" className="p-6 md:p-8 space-y-6">
           <div className="space-y-2">
             <div className="flex items-center gap-2">

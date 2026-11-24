@@ -76,13 +76,44 @@ export const S11TriageReview: React.FC = () => {
         </div>
       </MivoCard>
 
-      {/* 3D Holographic AI Energy Orb (Mivo / Viora Reference) */}
-      <div className="py-2">
-        <HolographicAiOrb
-          statusText={`Neural Triage Evaluated: ESI Level ${triageSuggestion.ruleLevel} (${triageSuggestion.ruleLevel === 1 ? 'Resuscitation' : 'Emergent'})`}
-          subText="Analyzing real-time vitals trajectory & hospital receiving bay capacity"
-          size="md"
-        />
+      {/* 3D Holographic AI Energy Orb & 3D Cranial Scan */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center py-2">
+        <div className="md:col-span-7">
+          <HolographicAiOrb
+            statusText={`Neural Triage Evaluated: ESI Level ${triageSuggestion.ruleLevel} (${triageSuggestion.ruleLevel === 1 ? 'Resuscitation' : 'Emergent'})`}
+            subText="Analyzing real-time vitals trajectory & hospital receiving bay capacity"
+            size="md"
+          />
+        </div>
+        <div className="md:col-span-5">
+          <div className="relative rounded-3xl overflow-hidden glass-specular border border-rose-500/20 shadow-xl bg-gradient-to-b from-rose-500/10 via-amber-500/5 to-transparent p-3.5">
+            <div className="flex items-center justify-between mb-2 px-1">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-rose-500 flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-rose-500 animate-ping" />
+                3D Neural Synapse Scan
+              </span>
+              <span className="text-[10px] font-mono text-slate-400">
+                GCS: {activeCase?.vitals?.gcs || 12}/15
+              </span>
+            </div>
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-inner border border-white/40 dark:border-white/10 group">
+              <img
+                src="/assets/mivo-cranial-neural-3d.jpg"
+                alt="3D Translucent Cranial and Neural Synapse Scan"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-2.5 inset-x-2.5 flex items-center justify-between text-white text-[10px] font-mono">
+                <span className="bg-black/60 backdrop-blur-md px-2 py-0.5 rounded-full border border-white/20">
+                  CEREBRAL ISCHEMIA RISK: LOW
+                </span>
+                <span className="bg-[#D4FF00] text-black font-black px-2 py-0.5 rounded-full shadow-sm">
+                  ESI 2 ACTIVE
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Two Columns Grid */}
