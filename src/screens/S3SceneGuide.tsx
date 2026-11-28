@@ -13,7 +13,7 @@ export const S3SceneGuide: React.FC = () => {
   const { currentLanguage } = useAppStore();
   const containerRef = React.useRef<HTMLDivElement>(null);
 
-  const [activeProtocolId, setActiveProtocolId] = React.useState<'cpr' | 'choking' | 'bleeding' | 'unconscious'>('cpr');
+  const [activeProtocolId, setActiveProtocolId] = React.useState<string>('cpr');
   const protocol: ProtocolDefinition = PROTOCOLS[activeProtocolId] || PROTOCOLS.cpr;
   const [currentStepIdx, setCurrentStepIdx] = React.useState(0);
   const [timerSeconds, setTimerSeconds] = React.useState(120);
@@ -29,7 +29,7 @@ export const S3SceneGuide: React.FC = () => {
   }, [currentStepIdx, activeProtocolId]);
 
   // Switch protocol handler
-  const handleSelectProtocol = (id: 'cpr' | 'choking' | 'bleeding' | 'unconscious') => {
+  const handleSelectProtocol = (id: string) => {
     setActiveProtocolId(id);
     setCurrentStepIdx(0);
     const firstStep = PROTOCOLS[id]?.steps[0];
@@ -126,25 +126,20 @@ export const S3SceneGuide: React.FC = () => {
 
         {/* Emergency Protocol Switcher Pills (RonDesignLab / Mivo Style) */}
         <div className="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar">
-          {[
-            { id: 'cpr', label: 'CPR (4 Steps)' },
-            { id: 'choking', label: 'Choking (Heimlich)' },
-            { id: 'bleeding', label: 'Severe Bleeding' },
-            { id: 'unconscious', label: 'Recovery Position' },
-          ].map((item) => {
+          {Object.values(PROTOCOLS).map((item) => {
             const isActive = activeProtocolId === item.id;
             return (
               <button
                 key={item.id}
                 type="button"
-                onClick={() => handleSelectProtocol(item.id as any)}
+                onClick={() => handleSelectProtocol(item.id)}
                 className={`px-3 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition-all border ${
                   isActive
                     ? 'bg-slate-950 text-white dark:bg-white dark:text-slate-950 border-slate-950 dark:border-white shadow-sm'
                     : 'bg-white/60 dark:bg-slate-800/60 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:bg-white'
                 }`}
               >
-                {item.label}
+                {item.shortLabel || item.title}
               </button>
             );
           })}
@@ -208,13 +203,7 @@ export const S3SceneGuide: React.FC = () => {
           {/* Floating Telemetry Pills - Bottom (Non-Obscuring) */}
           <div className="relative z-10 w-full flex items-center justify-between px-1 mt-2">
             <span className="px-3 py-1 rounded-full bg-slate-950/85 text-white font-mono text-[10px] font-bold border border-white/20 shadow-md backdrop-blur-xl">
-              {activeProtocolId === 'cpr'
-                ? 'Target: Lower Half of Sternum • 5-6 cm'
-                : activeProtocolId === 'choking'
-                ? 'Vector: Inward & Upward J-Thrust'
-                : activeProtocolId === 'bleeding'
-                ? 'Placement: 2-3 Inches Above Wound'
-                : 'Position: Lateral Recumbent Drain'}
+              {step.visualHint || 'Protocol Action Guidance'}
             </span>
             <span className="px-3 py-1 rounded-full bg-white/90 dark:bg-slate-900/90 text-slate-900 dark:text-white font-mono text-[10px] font-bold border border-slate-200 dark:border-white/20 shadow-md backdrop-blur-xl">
               Medically Validated • GoldenHour
@@ -241,6 +230,21 @@ export const S3SceneGuide: React.FC = () => {
             <p className="text-sm md:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
               {step.body}
             </p>
+
+            {/* What NOT to do Warning Box */}
+            {step.donts && (
+              <div className="mt-3 p-3.5 rounded-2xl bg-rose-500/10 border border-rose-500/30 flex items-start gap-2.5">
+                <AlertTriangle className="w-4 h-4 text-rose-600 dark:text-rose-400 shrink-0 mt-0.5" />
+                <div>
+                  <span className="text-[10px] font-mono font-black uppercase text-rose-600 dark:text-rose-400 block tracking-wider">
+                    CRITICAL WARNING • WHAT NOT TO DO
+                  </span>
+                  <span className="text-xs font-semibold text-rose-700 dark:text-rose-300 leading-snug">
+                    {step.donts}
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* CPR 110 BPM Visual Beat Metronome */}

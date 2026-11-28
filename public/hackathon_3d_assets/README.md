@@ -91,6 +91,50 @@ All assets in this suite are rendered on clean off-white porcelain studio backgr
 
 ---
 
+## High-Definition Mobile UI Visual Triptych Showcases
+
+Generated as high-definition presentation mockups displaying the GoldenHour AI design system across native mobile viewports:
+
+### 15. `goldenhour-ui-triptych-citizen-sos.jpg` (Citizen & Emergency Bystander Suite)
+- **Role**: Citizen onboarding, 3D anatomical pain scan, and interactive CPR rhythm pacer.
+- **Style**: Triple iPhone mockup display floating over radiant rose/peach liquid glass gradient.
+
+### 16. `goldenhour-ui-triptych-doctor-command.jpg` (Doctor Command & Trauma Triage Suite)
+- **Role**: Dr+ Command Map, Emergency Physician Case Radar, and 3D Diagnostic Flap Folder.
+- **Style**: Triple iPhone mockup display displaying Palantir-grade clinical command center.
+
+### 17. `goldenhour-ui-triptych-paramedic-volunteer.jpg` (Paramedic & Good Samaritan Suite)
+- **Role**: Paramedic live case vitals, AED community radar, and hospital bay readiness.
+- **Style**: Triple iPhone mockup display showcasing field crew telemetry and volunteer responder dispatch.
+
+---
+
+## Canonical User Reference Sheets & Design Blueprints
+
+The three visual benchmarks uploaded directly by the user as the definitive design North Star:
+
+### 18. `reference-01-drplus-ambulance-control-centre.jpg` (Command Deck Benchmark)
+- **Role**: Desktop/iPad command deck reference with 3-column layout, left vertical pill dock, coastal map with 15 min Easy Traffic pill, 3D Matthew Johnson trauma twin, and categorized triage queue.
+
+### 19. `reference-02-mobile-productivity-progress-screens.jpg` (Mobile System Benchmark)
+- **Role**: 3-screen mobile iOS architecture featuring obsidian 72% neon-lime radial progress ring card, horizontal stadium filter tabs (`4 To Do`, `2 In Progress`, `3 In Review`), calendar day picker capsules (`Mon 12`..`Wed 14`), and tactile pastel priority radio pills (`Low`, `Medium`, `High`).
+
+### 20. `reference-03-ethereal-onboarding-holographic-orb-screens.jpg` (Ethereal Gateway Benchmark)
+- **Role**: 3-screen RonDesignLab / WhispAI onboarding experience with pastel mesh gradient, floating frosted glass cards, dynamic tilted 3D perspective phone mockups floating in clouds, and a central holographic glowing 3D orb with orbiting glass tone capsules (`Casual`, `Formal`, `Friendly`, `Business`) and stadium slider buttons (`Next >>>` and `Get Started`).
+
+---
+
+## Asset Variations (`variations/`)
+Alternative camera angles, color passes, and refined iterations stored for hackathon presentation flexibility:
+- `cpr-step-01-variation-1.jpg`
+- `cpr-step-02-variation-1.jpg`
+- `cpr-step-02-variation-2.jpg`
+- `cpr-step-04-variation-1.jpg`
+- `emergency-rescue-tourniquet-variation-1.jpg`
+- `goldenhour-ui-showcase-variation-1.jpg`
+
+---
+
 ## Design System Integration Principles
 
 1. **Never Lock in Constricting Frames**:

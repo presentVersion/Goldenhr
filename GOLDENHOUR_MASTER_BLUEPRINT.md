@@ -64,6 +64,17 @@ This section documents the chronological progression of prompts, critiques, desi
 |  Iteration 6: The Anti-Framelock & Asset Liberation Iteration (Crucial Milestone)                 |
 |  --> Request: Do NOT squish assets into tiny buttons; eliminate dropdown toggles on 3D scan;     |
 |      save all assets in dedicated hackathon folder.                                              |
+|                                                                                                   |
+|  Iteration 7: 4-Step CPR Guide & Life-Threatening Emergency Rescue Suite                           |
+|  --> Request: Minimal & professional 4-step CPR guide + rescue tips on clean white porcelain.     |
+|                                                                                                   |
+|  Iteration 8: 10 Comprehensive Clinical Emergency Protocols with "What NOT to do" Safeguards      |
+|  --> Request: Add 10 Indian emergency protocols (Unconscious, Burn, Seizure, Stroke FAST,         |
+|      Chest Pain, Fracture, Snakebite, Heatstroke, Drowning, Poisoning) with clear Do's & Don'ts.  |
+|                                                                                                   |
+|  Iteration 9: Master Visual Triad & Mobile Design Breakdown (The 3 Canonical References)          |
+|  --> Request: Forensic architectural synthesis of Dr+ Command Deck, Mobile Progress Architecture, |
+|      and Ethereal Iridescent Orb Showcase for hackathon UI execution.                             |
 +---------------------------------------------------------------------------------------------------+
 ```
 
@@ -112,7 +123,39 @@ This section documents the chronological progression of prompts, critiques, desi
   - **Eliminated Dropdowns**: Removed the accordion dropdown toggle on [`S2SOS.tsx`](file:///c:/GoldenHour/src/screens/S2SOS.tsx). The 3D Anatomical Body Scan is permanently open, visible by default, and directly reactive to symptom clicks.
   - **Liberated Assets from Framelocks**: Removed cramped `w-12 h-12` icon boxes and replaced them with generous, unconstrained hero visual showcases (`aspect-[16/7]` on S8 Paramedic, wide-format on S14 Doctor, expansive CPR guide on S3, unconstrained transit hero on S4).
   - **Stripped Obscuring Gradients**: Removed heavy `from-slate-950/70` dark vignettes across S11, S16, and S21, allowing the raytraced 3D glass lighting to shine with crystal clarity.
-  - **Archived Master Asset Suite**: Created [`hackathon_3d_assets/`](file:///c:/GoldenHour/hackathon_3d_assets) and [`public/hackathon_3d_assets/`](file:///c:/GoldenHour/public/hackathon_3d_assets) storing all 11 full-res assets with complete documentation.
+  - **Archived Master Asset Suite**: Created [`hackathon_3d_assets/`](file:///c:/GoldenHour/hackathon_3d_assets) and [`public/hackathon_3d_assets/`](file:///c:/GoldenHour/public/hackathon_3d_assets) storing all 14 full-res assets with complete documentation.
+
+### Iteration 6: 4-Step CPR Guide & Medical Rescue Asset Suite
+* **User Direct Instruction**:
+  > *"what i want you to do now is analyze the images in the hackathon 3d assets folder , go through the images and see all the design consistency , font placings , blocks , cards , cutvatures , rounded corners , amd all of that design specifics and themes , gradients , glassmorphisms and check the font , after doing all of that i want you to generate minimal and professional looking cpr guide of 3-4 steps or frames and other rescue emergency tips or hacks or medically prescribed revised excersise or stuff like cpr and i want those images generated cleanly , no glitches , no nothing , i want them professional looking white background assets with the design theme , plan all of that and do it"*
+* **Action Taken**:
+  - Generated and standardized the 4-step CPR instruction suite on clean white porcelain studio backgrounds (`#FAFAFA`):
+    - `cpr-step-01-assess-alert.jpg` (Assess & Alert, head-tilt chin-lift, open airway).
+    - `cpr-step-02-hand-placement.jpg` (Hand Position & Interlock on lower sternum, 90° straight arms).
+    - `cpr-step-03-chest-compressions.jpg` (Compressions 5–6 cm depth, 110 BPM metronome rhythm).
+    - `cpr-step-04-aed-defibrillation.jpg` (Anterolateral AED pad placement & electrical vector).
+  - Generated life-threatening rescue emergency visual cards:
+    - `emergency-rescue-heimlich-choking.jpg` (Choking Relief upward J-thrust).
+    - `emergency-rescue-tourniquet-bleeding.jpg` (Arterial hemorrhage tactical windlass tourniquet).
+    - `emergency-rescue-recovery-position.jpg` (Unconscious breathing lateral recumbent recovery position).
+
+### Iteration 7: 10 Comprehensive Clinical Emergency Protocols with Safety Safeguards
+* **User Direct Instruction**:
+  > *"also could you add these aswell: Unconscious but breathing, Burn, Seizure, Suspected stroke, Chest pain, Fracture or suspected spine injury, Snakebite (common in India), Heatstroke, Drowning, Poisoning, generate as many images as you can possibly make"*
+* **Action Taken**:
+  - Engineered 10 clinical first-aid definitions in [`src/services/protocols.ts`](file:///c:/GoldenHour/src/services/protocols.ts) bringing total protocols to 14.
+  - Implemented the prominent **"CRITICAL WARNING • WHAT NOT TO DO"** callout box in [`src/screens/S3SceneGuide.tsx`](file:///c:/GoldenHour/src/screens/S3SceneGuide.tsx) with bold rose border (`border-rose-500/30 bg-rose-500/10`) to explicitly prevent dangerous bystander mistakes (e.g. cutting snakebites, placing ice on burns, putting objects in seizure mouths, or giving water to unconscious patients).
+  - Added visual hint stadium pills, countdown timers (20 min for burn cool, 5 min seizure threshold, 3 min tourniquet), and dynamic horizontal protocol selector.
+
+### Iteration 8: Forensic Architectural Deconstruction of the 3 Master Visual Design References
+* **User Direct Instruction**:
+  > User attached 3 canonical high-definition UI design reference sheets:
+  > 1. **Desktop / Tablet Command Deck**: The complete *Dr+ Ambulance Control Centre* with 3D human torso, heart attack aura, transit map, and categorized triage queue.
+  > 2. **Mobile Health & Productivity App**: The 3-screen iOS mobile system featuring *Good Morning / Let's Make Today Productive* (obsidian card with 72% neon-lime progress ring, horizontal stadium filter tabs `4 To Do`, `2 In Progress`, `3 In Review`, task card with priority dot and avatar stacks), *Task Schedule* (calendar day capsules `Mon 12`..`Wed 14`), and *Add New Task* (modal sheet with tactile pastel priority pills `Low`, `Medium`, `High`).
+  > 3. **Ethereal Visual Onboarding & Feature Showcase**: The 3-screen RonDesignLab / WhispAI onboarding experience with pastel mesh gradient, floating liquid frosted glass cards, dynamic tilted 3D perspective phone mockups floating in clouds, and a central holographic glowing 3D orb with orbiting glass tone capsules (`Casual`, `Formal`, `Friendly`, `Business`) and stadium slider buttons (`Next >>>` and `Get Started`).
+* **Action Taken**:
+  - Conducted complete forensic analysis of all 3 sheets, deconstructing design tokens, layout grids, container radii, material shaders, and animation states.
+  - Documented complete component recipes and architectural cross-references for hackathon implementation.
 
 ---
 
@@ -194,6 +237,94 @@ Used to separate the luminous 3D canvas from the tactile card decks:
   <path d="M 0,32 L 0,0 Q 200,38 400,0 L 400,32 Z" fill="rgba(255, 255, 255, 0.95)" />
 </svg>
 ```
+
+### 4.4 The Canonical Visual Design Triad (Forensic Breakdown of Master Reference Sheets)
+
+The user provided three canonical visual benchmarks establishing the definitive design standard for GoldenHour AI. Every screen, component, and interaction in the hackathon codebase is mapped to these three visual blueprints:
+
+```
++-----------------------------------------------------------------------------------------------------------------+
+|                                 THE 3 MASTER CANONICAL VISUAL BENCHMARKS                                        |
++-----------------------------------------------------------------------------------------------------------------+
+|  REFERENCE SHEET 1: Dr+ Ambulance Control Centre (Desktop / Command Deck Master)                                |
+|  --> Features: 3-column grid, vertical black pill dock, coastal map, 3D anatomical twin, SlideCommit dispatch   |
+|                                                                                                                 |
+|  REFERENCE SHEET 2: Mobile Health & Productivity App (3-Screen Native Architecture)                             |
+|  --> Features: Obsidian 72% neon-lime progress card, horizontal stadium filter tabs, tactile priority pills     |
+|                                                                                                                 |
+|  REFERENCE SHEET 3: Ethereal Onboarding & 3D Holographic Orb Showcase (Mivo Grand Gateway)                       |
+|  --> Features: Radiant pastel mesh, floating frosted glass, 3D perspective cards, glowing orb, stadium sliders|
++-----------------------------------------------------------------------------------------------------------------+
+```
+
+#### 4.4.1 Reference Sheet 1: Dr+ Ambulance Control Centre (Command Deck)
+* **Visual Identity & Grid**:
+  - **Left Vertical Pill Dock (`w-16 h-[88vh] rounded-[36px] bg-[#0A0D14]`)**: Floating jet-black capsule containing the Dr+ branding and 5 micro-spaced navigation icons (Dashboard, Profile, Calendar, Analytics, Settings).
+  - **Geospatial Coastal Map Zone (4 Columns)**: Subtle desaturated pastel street map with transit spline lines linking the accident scene to the hospital trauma bay marked with a red circled **"H"** pin.
+  - **Overlaid Traffic Beacon Pill**: Floating jet-black stadium capsule (`bg-[#0B0D14]/90 backdrop-blur-xl border border-white/20`) displaying `15 min` in bold sans-serif, emerald status label `Easy Traffic`, and circular vehicle icon thumbnail.
+  - **Floating Sector ETA Chips**: `Hospital (H) 12 min`, `54 min Flyover`, `25 min`, `5 min`, `49 min`.
+  - **Telemetry HUD Counters**: `6 New Calls` (bold crimson `#E11D48`) and `12 Free Ambulance` (bold jade emerald `#059669`).
+  - **Central 3D Clinical Trauma Column (5 Columns)**:
+    - **Patient Identity Badge**: Clean sans-serif title `Matthew Johnson` with subtitle `26 old`.
+    - **Anatomical Trauma Twin**: Volumetric muscular/skeletal torso on clean porcelain glass background with a radiant, pulsing amber/crimson glow over the left pectoral/sternal region (*Heart Attack*).
+    - **Floating Telemetry Glass Chips**:
+      - `Pressure`: Dual-waveform sparkline displaying systolic/diastolic values ($200/110\text{ mmHg}$).
+      - `Medications 3`: Tactile card showing *Metformin 150 mg* with a 3D bicolored gelatin capsule.
+      - `Cardiac Status`: Specular chip positioned adjacent to the right shoulder.
+    - **Ambulance Fleet Selection Deck**:
+      - Helicopter Option: `Cardiohelp • 3 Free` (selected state in warm peach/amber gradient card `#FEF3C7`).
+      - Ground ICU Option: `Cardiohelp` (clean white porcelain card).
+    - **High-Friction Action Confirmation**: Stadium capsule `<SlideCommit />` slider (`✓ >> Swipe to Confirm ✓`).
+  - **Right Active Triage Incidents Queue (3 Columns)**:
+    - **Hero Black Card**: Deep obsidian stadium card (`#0F172A`) for **Heart Attack** with a pulsing red status bead, 3D heart icon, and `15 min`.
+    - **Categorized Clinical Groups**:
+      - *Car Accident*: Brain Concussion (`5 min`, 3D brain icon), Arm Fracture (`49 min`, bone icon).
+      - *Animal Attack*: Leg Injury (`12 min`, leg bone icon), Facial Dissection (`25 min`, skull icon), Arterial bleed.
+
+#### 4.4.2 Reference Sheet 2: Mobile Health & Productivity App (3-Screen System)
+* **Screen 1: Home Dashboard & Progress Ring**:
+  - **Header & Dynamic Island**: Circular user avatar + "Good Morning Olivia Reed", circular `+` button, and notification bell.
+  - **Hero Typography**: Bold humanist grotesque `Let's Make Today Productive` (font size: 28px, tracking: -0.02em).
+  - **"Today's Progress" Obsidian Card**:
+    - Deep midnight slate card (`bg-[#0B0F17]` / `rounded-[28px]` / `p-5`).
+    - **Radial Progress Ring**: Vivid Neon Lime (`#D4F933` / `#A3E635`) circular progress indicator at 72% with soft glow.
+    - **Right Metric Stack**: Clean vertical column showing Total Task (12), Completed Task (12), Pending Task (12) with subtle icons.
+  - **Horizontal Stadium Filter Tabs**:
+    - `4 To Do`: Clean white capsule with high-contrast Neon Lime badge (`bg-[#D4F933] text-black font-black px-2 py-0.5 rounded-full`) for the count.
+    - `2 In Progress`: Frosted white capsule with subtle border.
+    - `3 In Review`: Frosted white capsule with subtle border.
+  - **Task Card Architecture**: Clean porcelain card with soft drop shadow, red priority dot, title `Design Landing page`, time badge `10:30 AM - 11:30 AM`, team avatar stack (`+4`), and top-right diagonal arrow link button.
+  - **Floating Bottom Capsule Dock**: Frosted dark dock floating 20px above viewport bottom with rounded pill active state indicator.
+* **Screen 2: Task Schedule & Calendar Timeline**:
+  - **Date Picker Row**: Horizontal row of date capsules (`Mon 12`, `Tue 13`, `Wed 14` [active solid black circle with white text], `Thu 15`, `Fri 16`, `Sat 17`).
+  - **Category Pills**: `All` (solid black pill), `Work` (white pill with briefcase icon), `Personal` (white pill with user icon).
+  - **Timeline Cards**: Time markers (9:00 AM, 11:00 AM) with vertical connector line, meeting cards with avatars, and actionable buttons (e.g. Google Meet blue pill button).
+* **Screen 3: Add New Task Modal Sheet**:
+  - **Header**: Circular `X` dismiss button and circular `✓` save button.
+  - **Input Fields**: Softly rounded inputs for Task Title, Description textarea, and split Date & Time pill inputs.
+  - **Tactile Priority Radio Selector**: Three distinct pastel stadium pills with active selection states:
+    - `Low`: Soft mint green (`bg-[#DCFCE7] text-[#15803D] border-[#BBF7D0]`).
+    - `Medium`: Soft warm peach/amber (`bg-[#FEF3C7] text-[#B45309] border-[#FDE68A]`).
+    - `High`: Soft coral/rose (`bg-[#FEE2E2] text-[#B91C1C] border-[#FECACA]`).
+  - **Tag Selector**: Dismissible stadium badges (`Design X`, `UI/UX X`, `Work X`, `+ Add`).
+  - **Primary CTA**: Solid obsidian stadium pill `Create Task` with 100% width and spring press animation.
+
+#### 4.4.3 Reference Sheet 3: Ethereal Visual Onboarding & Feature Showcase
+* **Visual Atmosphere & Background**:
+  - **Radiant Pastel Mesh**: Soft, dreamlike gradient blending lavender (`#E8DCF8`), warm rose (`#FCE8EF`), apricot glow (`#FFF6E5`), and sky cyan (`#E6F5FC`).
+  - **Dynamic Island & Time Telemetry**: Top iOS status bar with Dynamic Island notch and time indicator `11:30` / `09:17`.
+* **Screen 1: "Suggestions That Speak Like You"**:
+  - Floating frosted liquid glass card with glowing brand badge (Gmail / Mivo 'M').
+  - Floating translucent tag pills: "Improve it", "Sound Confident", "Better Suggestion".
+  - Stadium button slider: Solid dark `Next` button sliding across glowing gradient track `>>>`.
+* **Screen 2: "Stay Connected, Effortlessly"**:
+  - 3D phone mockup floating through volumetric atmospheric clouds / mist.
+  - Dynamic stacked notification cards floating in 3D isometric perspective space with user avatars and text bubbles.
+  - Stadium button slider `Next >>>`.
+* **Screen 3: "Now You Can Choose Your Tone"**:
+  - Centerpiece: 3D glowing iridescent holographic orb (`W+` logo) radiating vertical volumetric beams of light.
+  - Orbiting frosted glass stadium pills: `Casual Tone`, `Formal Tone`, `Friendly Tone`, `Business Tone`.
+  - Primary Action CTA: Full-width solid obsidian stadium capsule `Get Started`.
 
 ---
 
@@ -423,6 +554,213 @@ Used in [`S10CommandMap.tsx`](file:///c:/GoldenHour/src/screens/S10CommandMap.ts
 ### 8.4 Lenis Smooth Scroll & GSAP Scroll-Float Reveals
 Used across [`S1Landing.tsx`](file:///c:/GoldenHour/src/screens/S1Landing.tsx) and dashboard feeds:
 * **Effect**: As the user scrolls, incoming telemetry cards smoothly blur-fade in from the bottom viewport and float upward into crisp focus.
+
+### 8.5 Canonical Component Code Recipes (From User Reference Sheets)
+
+To ensure rapid, error-free UI development during the hackathon, these ready-to-use React + Tailwind CSS component patterns match the exact visual tokens from the user's reference images:
+
+#### 8.5.1 `<ObsidianProgressCard />` (Reference Sheet 2)
+```tsx
+import React from 'react';
+import { CheckCircle2, Clock, AlertCircle } from 'lucide-react';
+
+interface ObsidianProgressCardProps {
+  percentage: number;
+  total: number;
+  completed: number;
+  pending: number;
+}
+
+export const ObsidianProgressCard: React.FC<ObsidianProgressCardProps> = ({
+  percentage = 72,
+  total = 12,
+  completed = 12,
+  pending = 12,
+}) => {
+  const radius = 38;
+  const circumference = 2 * Math.PI * radius;
+  const strokeDashoffset = circumference - (percentage / 100) * circumference;
+
+  return (
+    <div className="w-full p-5 rounded-[28px] bg-[#0B0F17] text-white shadow-2xl border border-white/10 flex items-center justify-between">
+      {/* 72% Neon-Lime Radial Progress Ring */}
+      <div className="relative flex items-center justify-center shrink-0">
+        <svg className="w-28 h-28 transform -rotate-90">
+          <circle
+            cx="56"
+            cy="56"
+            r={radius}
+            stroke="rgba(255, 255, 255, 0.12)"
+            strokeWidth="9"
+            fill="transparent"
+          />
+          <circle
+            cx="56"
+            cy="56"
+            r={radius}
+            stroke="#D4F933"
+            strokeWidth="9"
+            fill="transparent"
+            strokeDasharray={circumference}
+            strokeDashoffset={strokeDashoffset}
+            strokeLinecap="round"
+            className="transition-all duration-1000 ease-out"
+          />
+        </svg>
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <span className="text-xl font-black text-white tracking-tight">{percentage}%</span>
+        </div>
+      </div>
+
+      {/* Right Metric Stack */}
+      <div className="space-y-2.5 pr-2">
+        <div className="flex items-center gap-3 text-xs">
+          <div className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-slate-400">
+            <CheckCircle2 className="w-3.5 h-3.5 text-[#D4F933]" />
+          </div>
+          <div>
+            <span className="font-bold text-white text-sm">{total}</span>
+            <span className="text-slate-400 ml-1.5 font-medium">Total Task</span>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-3 text-xs">
+          <div className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-slate-400">
+            <Clock className="w-3.5 h-3.5 text-sky-400" />
+          </div>
+          <div>
+            <span className="font-bold text-white text-sm">{completed}</span>
+            <span className="text-slate-400 ml-1.5 font-medium">Completed Task</span>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-3 text-xs">
+          <div className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-slate-400">
+            <AlertCircle className="w-3.5 h-3.5 text-amber-400" />
+          </div>
+          <div>
+            <span className="font-bold text-white text-sm">{pending}</span>
+            <span className="text-slate-400 ml-1.5 font-medium">Pending Task</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+```
+
+#### 8.5.2 `<TactilePrioritySelector />` (Reference Sheet 2)
+```tsx
+import React from 'react';
+
+export type PriorityLevel = 'low' | 'medium' | 'high';
+
+interface TactilePrioritySelectorProps {
+  value: PriorityLevel;
+  onChange: (level: PriorityLevel) => void;
+}
+
+export const TactilePrioritySelector: React.FC<TactilePrioritySelectorProps> = ({ value, onChange }) => {
+  const options: { id: PriorityLevel; label: string; activeClass: string; inactiveClass: string }[] = [
+    {
+      id: 'low',
+      label: 'Low',
+      activeClass: 'bg-[#DCFCE7] text-[#15803D] border-[#86EFAC] ring-2 ring-[#86EFAC]/40 font-bold',
+      inactiveClass: 'bg-[#F0FDF4] text-[#166534] border-[#DCFCE7] hover:bg-[#DCFCE7]',
+    },
+    {
+      id: 'medium',
+      label: 'Medium',
+      activeClass: 'bg-[#FEF3C7] text-[#B45309] border-[#FCD34D] ring-2 ring-[#FCD34D]/40 font-bold',
+      inactiveClass: 'bg-[#FFFBEB] text-[#92400E] border-[#FEF3C7] hover:bg-[#FEF3C7]',
+    },
+    {
+      id: 'high',
+      label: 'High',
+      activeClass: 'bg-[#FEE2E2] text-[#B91C1C] border-[#FCA5A5] ring-2 ring-[#FCA5A5]/40 font-bold',
+      inactiveClass: 'bg-[#FEF2F2] text-[#991B1B] border-[#FEE2E2] hover:bg-[#FEE2E2]',
+    },
+  ];
+
+  return (
+    <div className="grid grid-cols-3 gap-2.5 w-full">
+      {options.map((opt) => (
+        <button
+          key={opt.id}
+          type="button"
+          onClick={() => onChange(opt.id)}
+          className={`py-3 rounded-full text-xs font-semibold tracking-wide border transition-all duration-200 shadow-xs flex items-center justify-center ${
+            value === opt.id ? opt.activeClass : opt.inactiveClass
+          }`}
+        >
+          {opt.label}
+        </button>
+      ))}
+    </div>
+  );
+};
+```
+
+#### 8.5.3 `<StadiumFilterTabs />` (Reference Sheet 2)
+```tsx
+import React from 'react';
+
+interface StadiumFilterTabsProps {
+  activeTab: string;
+  onTabChange: (tab: string) => void;
+  counts: { todo: number; inProgress: number; inReview: number };
+}
+
+export const StadiumFilterTabs: React.FC<StadiumFilterTabsProps> = ({ activeTab, onTabChange, counts }) => {
+  return (
+    <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+      {/* 4 To Do with Neon-Lime Badge */}
+      <button
+        type="button"
+        onClick={() => onTabChange('todo')}
+        className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all flex items-center gap-1.5 border shadow-xs ${
+          activeTab === 'todo'
+            ? 'bg-slate-950 text-white border-slate-950 dark:bg-white dark:text-slate-950'
+            : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-white/10'
+        }`}
+      >
+        <span className="w-5 h-5 rounded-full bg-[#D4F933] text-black font-black text-[11px] flex items-center justify-center shrink-0">
+          {counts.todo}
+        </span>
+        <span>To Do</span>
+      </button>
+
+      {/* 2 In Progress */}
+      <button
+        type="button"
+        onClick={() => onTabChange('inProgress')}
+        className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all flex items-center gap-1.5 border shadow-xs ${
+          activeTab === 'inProgress'
+            ? 'bg-slate-950 text-white border-slate-950 dark:bg-white dark:text-slate-950'
+            : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-white/10'
+        }`}
+      >
+        <span className="text-slate-400 font-bold text-xs">{counts.inProgress}</span>
+        <span>In Progress</span>
+      </button>
+
+      {/* 3 In Review */}
+      <button
+        type="button"
+        onClick={() => onTabChange('inReview')}
+        className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all flex items-center gap-1.5 border shadow-xs ${
+          activeTab === 'inReview'
+            ? 'bg-slate-950 text-white border-slate-950 dark:bg-white dark:text-slate-950'
+            : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 border-slate-200 dark:border-white/10'
+        }`}
+      >
+        <span className="text-slate-400 font-bold text-xs">{counts.inReview}</span>
+        <span>In Review</span>
+      </button>
+    </div>
+  );
+};
+```
 
 ---
 
