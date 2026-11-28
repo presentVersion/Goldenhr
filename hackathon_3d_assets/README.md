@@ -57,6 +57,40 @@ This directory contains the complete suite of photorealistic, medical-grade 3D r
 
 ---
 
+## 4-Step CPR Lifesaving Protocol & Emergency Rescue Suite (White Porcelain Studio Aesthetic)
+
+All assets in this suite are rendered on clean off-white porcelain studio backgrounds (`#FAFAFA`) matching the RonDesignLab / Mivo visual design language, featuring translucent borosilicate crystal anatomy, deep obsidian badges (`#141014`), electric neon-lime (`#D4FF00`) status beads, and frosted glass stadium pills.
+
+### 8. `cpr-step-01-assess-alert.jpg` (CPR Step 1: Assess & Alert)
+- **Role**: Initial consciousness check, airway opening (head-tilt chin-lift), and 108 dispatch trigger.
+- **Style**: Translucent crystalline supine patient with gentle two-handed porcelain airway tilt, glowing cyan-amber airway path, obsidian badge `01 • ASSESS & ALERT`, and frosted pills `Unresponsive / No Normal Breathing`, `Call 108 / Emergency Dispatch`, `Airway Opened`.
+
+### 9. `cpr-step-02-hand-placement.jpg` (CPR Step 2: Hand Position & Interlock)
+- **Role**: Anatomical breastbone targeting and perpendicular compression arm lock.
+- **Style**: Close-up crystalline ribs with internal glowing amber heart, interlocked porcelain hands on lower sternum, locked arms at 90°, neon-lime concentric target `Target: Center of Chest`, and badge `02 • HAND POSITION`.
+
+### 10. `cpr-step-03-chest-compressions.jpg` (CPR Step 3: Compressions 100–120 BPM)
+- **Role**: Compression depth (5–6 cm) and rhythmic pacing guidance.
+- **Style**: Translucent torso receiving vertical downward compression, glowing amber heart, concentric golden soundwave ripples, neon-lime metronome bar `100–120 BPM • Stayin' Alive Pace`, vertical arrow gauge `5–6 cm Depth`, and badge `03 • COMPRESS & RECOIL`.
+
+### 11. `cpr-step-04-aed-defibrillation.jpg` (CPR Step 4: AED Pad Placement & Rhythm Analysis)
+- **Role**: Anterolateral electrode pad positioning and automated defibrillation sequence.
+- **Style**: Crystalline male torso with Pad 1 on upper right clavicle and Pad 2 on lower left ribcage, glowing cyan/amber electrical vector through the heart, compact floating glass AED unit, obsidian badge `04 • AED PAD PLACEMENT`, and shock status `Shock Advised / Resume CPR 2 Min`.
+
+### 12. `emergency-rescue-heimlich-choking.jpg` (Choking Relief: Heimlich Maneuver)
+- **Role**: Foreign body airway obstruction dislodgement for conscious adults.
+- **Style**: Translucent anatomy with rescuer arms wrapping from behind, fist positioned above navel, glowing neon-lime/amber upward J-vector arrow, and stadium pills `Fist Above Navel`, `Quick Inward & Upward J-Thrusts`, `Repeat Until Airway Clears`.
+
+### 13. `emergency-rescue-tourniquet-bleeding.jpg` (Severe Bleeding: Windlass Tourniquet)
+- **Role**: Life-threatening extremity hemorrhage control.
+- **Style**: Translucent crystalline arm with anatomical bones and arterial network, high-contrast tactical windlass tourniquet applied 2–3 inches proximal to wound with locked windlass rod, neon-lime occlusion indicator halting crimson blood flow, and stadium pills `Apply 2–3 Inches Above Wound`, `Tighten Until Bleeding Stops`, `Record Time of Application`, `Never Loosen in Transit`.
+
+### 14. `emergency-rescue-recovery-position.jpg` (Recovery Position: Airway Protection)
+- **Role**: Post-resuscitation and unconscious breathing patient stabilization.
+- **Style**: Translucent crystalline patient in lateral recumbent recovery position (top knee bent 90°, top hand supporting cheek, mouth angled downward to drain fluids), glowing open airway trajectory, and stadium pills `Unconscious but Breathing`, `Roll Onto Side`, `Tilt Head to Drain Fluids`, `Airway Clear & Protected`.
+
+---
+
 ## Design System Integration Principles
 
 1. **Never Lock in Constricting Frames**:

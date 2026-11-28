@@ -316,6 +316,48 @@ Use the prompt engineering blueprints below to generate matching assets using Na
 * **Prompt**:
   > *"High-resolution 3D render of floating bicolored translucent gelatin medication capsules and lozenges. Liquid meniscus refraction, internal checkmark debossing, warm amber, jade green, and sapphire drops. Octane render, caustic liquid lighting, clean white porcelain tabletop."*
 
+#### 8. `cpr-step-01-assess-alert.jpg` (CPR Step 1: Assess & Alert)
+* **File Location**: [`hackathon_3d_assets/cpr-step-01-assess-alert.jpg`](file:///c:/GoldenHour/hackathon_3d_assets/cpr-step-01-assess-alert.jpg)
+* **Dimensions**: $1344 \times 768$ px • Clean White Porcelain Studio (#FAFAFA)
+* **Prompt**:
+  > *"Pristine, minimal, medical-grade 3D emergency CPR instruction card on off-white porcelain background. Stylized crystalline supine patient with gentle two-handed head-tilt chin-lift maneuver, glowing cyan/amber open airway path, obsidian badge '01 • ASSESS & ALERT' with neon-lime dot, and frosted glass stadium pills: 'Unresponsive / No Normal Breathing', 'Airway Opened', 'Call 108 / Emergency Dispatch', 'Are You Okay?'."*
+
+#### 9. `cpr-step-02-hand-placement.jpg` (CPR Step 2: Hand Position & Interlock)
+* **File Location**: [`hackathon_3d_assets/cpr-step-02-hand-placement.jpg`](file:///c:/GoldenHour/hackathon_3d_assets/cpr-step-02-hand-placement.jpg)
+* **Dimensions**: $1344 \times 768$ px • Clean White Porcelain Studio (#FAFAFA)
+* **Prompt**:
+  > *"Close-up crystalline ribs with glowing amber heart, interlocked porcelain hands on lower sternum, locked arms at 90° angle, neon-lime concentric target 'Target: Center of Chest', obsidian badge '02 • HAND POSITION', and frosted glass pills: 'Arms Locked at 90°', 'Interlock Fingers', 'Heel on Lower Sternum'."*
+
+#### 10. `cpr-step-03-chest-compressions.jpg` (CPR Step 3: Compressions 100–120 BPM)
+* **File Location**: [`hackathon_3d_assets/cpr-step-03-chest-compressions.jpg`](file:///c:/GoldenHour/hackathon_3d_assets/cpr-step-03-chest-compressions.jpg)
+* **Dimensions**: $1344 \times 768$ px • Clean White Porcelain Studio (#FAFAFA)
+* **Prompt**:
+  > *"Crystalline torso undergoing downward vertical compression, glowing amber heart, concentric golden soundwave ripples, vertical depth arrow '5–6 cm Depth', obsidian badge '03 • COMPRESS & RECOIL', and neon-lime metronome bar '100–120 BPM • Stayin' Alive Pace'."*
+
+#### 11. `cpr-step-04-aed-defibrillation.jpg` (CPR Step 4: AED Pad Placement)
+* **File Location**: [`hackathon_3d_assets/cpr-step-04-aed-defibrillation.jpg`](file:///c:/GoldenHour/hackathon_3d_assets/cpr-step-04-aed-defibrillation.jpg)
+* **Dimensions**: $1344 \times 768$ px • Clean White Porcelain Studio (#FAFAFA)
+* **Prompt**:
+  > *"Crystalline male torso with Pad 1 on upper right clavicle and Pad 2 on lower left ribcage, glowing cyan/amber electrical conduction vector through heart, compact floating glass AED, obsidian badge '04 • AED PAD PLACEMENT', and shock status 'Shock Advised / Resume CPR 2 Min'."*
+
+#### 12. `emergency-rescue-heimlich-choking.jpg` (Choking Relief: Heimlich Maneuver)
+* **File Location**: [`hackathon_3d_assets/emergency-rescue-heimlich-choking.jpg`](file:///c:/GoldenHour/hackathon_3d_assets/emergency-rescue-heimlich-choking.jpg)
+* **Dimensions**: $1344 \times 768$ px • Clean White Porcelain Studio (#FAFAFA)
+* **Prompt**:
+  > *"3D emergency instruction card for choking rescue: translucent crystalline anatomy, rescuer arms wrapping from behind, fist above navel, glowing neon-lime/amber upward J-vector arrow, and stadium pills: 'Fist Above Navel', 'Quick Inward & Upward J-Thrusts', 'Repeat Until Airway Clears'."*
+
+#### 13. `emergency-rescue-tourniquet-bleeding.jpg` (Severe Bleeding: Windlass Tourniquet)
+* **File Location**: [`hackathon_3d_assets/emergency-rescue-tourniquet-bleeding.jpg`](file:///c:/GoldenHour/hackathon_3d_assets/emergency-rescue-tourniquet-bleeding.jpg)
+* **Dimensions**: $1344 \times 768$ px • Clean White Porcelain Studio (#FAFAFA)
+* **Prompt**:
+  > *"3D emergency instruction card for severe hemorrhage: translucent arm anatomy, tactical windlass tourniquet applied 2-3 inches above wound, arterial occlusion indicator halting crimson blood flow, and stadium pills: 'Apply 2–3 Inches Above Wound', 'Tighten Until Bleeding Stops', 'Record Time of Application', 'Never Loosen in Transit'."*
+
+#### 14. `emergency-rescue-recovery-position.jpg` (Recovery Position: Airway Protection)
+* **File Location**: [`hackathon_3d_assets/emergency-rescue-recovery-position.jpg`](file:///c:/GoldenHour/hackathon_3d_assets/emergency-rescue-recovery-position.jpg)
+* **Dimensions**: $1344 \times 768$ px • Clean White Porcelain Studio (#FAFAFA)
+* **Prompt**:
+  > *"Translucent crystalline patient in lateral recumbent recovery position, top knee bent 90°, top hand under cheek, mouth angled downward, glowing open airway trajectory, and stadium pills: 'Unconscious but Breathing', 'Roll Onto Side', 'Tilt Head to Drain Fluids', 'Airway Clear & Protected'."*
+
 ---
 
 ## 7. Technical Architecture & Regulatory Constraints

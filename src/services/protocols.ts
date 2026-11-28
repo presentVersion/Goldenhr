@@ -2,6 +2,7 @@ export interface ProtocolStep {
   stepNumber: number;
   title: string;
   body: string;
+  image?: string;
   hasTimer?: boolean;
   timerDurationSeconds?: number;
   hasMetronome?: boolean;
@@ -12,95 +13,34 @@ export interface ProtocolDefinition {
   id: string;
   emergencyType: string;
   title: string;
+  category?: 'cpr' | 'choking' | 'bleeding' | 'recovery';
   steps: ProtocolStep[];
 }
 
 export const PROTOCOLS: Record<string, ProtocolDefinition> = {
-  bleeding: {
-    id: 'bleeding',
-    emergencyType: 'Heavy Bleeding',
-    title: 'Severe Bleeding Control',
-    steps: [
-      {
-        stepNumber: 1,
-        title: 'Ensure Scene Safety',
-        body: 'Check that the area is safe for you and the patient. Wear protective gloves if available.',
-      },
-      {
-        stepNumber: 2,
-        title: 'Apply Continuous Direct Pressure',
-        body: 'Place a clean cloth, sterile gauze, or clothing directly over the wound. Press down firmly with both hands.',
-        hasTimer: true,
-        timerDurationSeconds: 180, // 3 minutes firm continuous pressure
-      },
-      {
-        stepNumber: 3,
-        title: 'Maintain Pressure Without Peeking',
-        body: 'Do not lift the cloth to check bleeding. If blood soaks through, place another layer directly on top and continue pressing.',
-      },
-      {
-        stepNumber: 4,
-        title: 'Position the Patient',
-        body: 'Keep the patient lying down flat and calm to prevent shock. Keep them warm with a blanket or jacket.',
-      },
-      {
-        stepNumber: 5,
-        title: 'Monitor Breathing',
-        body: 'Continue direct pressure until the ambulance crew arrives and takes over. Do not use unapproved pressure-point tourniquets.',
-      },
-    ],
-  },
-  unconscious: {
-    id: 'unconscious',
-    emergencyType: 'Unresponsive / Unconscious',
-    title: 'Unconscious Patient Care',
-    steps: [
-      {
-        stepNumber: 1,
-        title: 'Check Responsiveness',
-        body: 'Tap the shoulders firmly and shout loudly: "Are you okay?". If no response, prepare for recovery position.',
-      },
-      {
-        stepNumber: 2,
-        title: 'Open the Airway',
-        body: 'Gently tilt the head back and lift the chin. Look and feel for normal breathing for 10 seconds.',
-      },
-      {
-        stepNumber: 3,
-        title: 'Place in Recovery Position',
-        body: 'Roll the patient gently onto their side. Bend their top leg at a right angle to prevent them rolling forward.',
-      },
-      {
-        stepNumber: 4,
-        title: 'Tilt Head to Clear Airway',
-        body: 'Ensure mouth is angled slightly downward so vomit or fluid can drain safely without choking.',
-      },
-      {
-        stepNumber: 5,
-        title: 'Monitor Continuously',
-        body: 'Keep an eye on regular breathing until Ambulance 04 reaches your location.',
-      },
-    ],
-  },
   cpr: {
     id: 'cpr',
-    emergencyType: 'Cardiac Arrest / Not Breathing',
-    title: 'Hands-Only CPR Protocol',
+    emergencyType: 'Cardiac Arrest / Unresponsive',
+    title: '4-Step Hands-Only CPR & Defibrillation',
+    category: 'cpr',
     steps: [
       {
         stepNumber: 1,
-        title: 'Verify No Normal Breathing',
-        body: 'If the person is unresponsive and not breathing or only gasping, immediately begin chest compressions.',
+        title: 'Assess & Alert (Check Responsiveness)',
+        body: 'Tap the shoulders firmly and shout loudly: "Are you okay?". If there is no response and no normal breathing, immediately call 108 or activate the emergency beacon. Gently perform a head-tilt chin-lift maneuver to clear the airway.',
+        image: '/assets/cpr-step-01-assess-alert.jpg',
       },
       {
         stepNumber: 2,
-        title: 'Position Your Hands',
-        body: 'Place the heel of one hand in the center of the chest. Place your other hand on top and interlock fingers.',
+        title: 'Hand Position & Interlock',
+        body: 'Position the heel of one hand on the center of the breastbone (lower half of the sternum). Place your other hand on top and interlock your fingers. Lock your elbows straight and position your shoulders directly above your hands at a 90° angle.',
+        image: '/assets/cpr-step-02-hand-placement.jpg',
       },
       {
         stepNumber: 3,
-        title: 'Push Hard and Fast at 110 BPM',
-        body: 'Push straight down at least 5 cm (2 inches). Allow full chest recoil between compressions. Follow the metronome rhythm.',
+        title: 'Continuous Compressions (100–120 BPM)',
+        body: 'Push hard and fast down at least 5–6 cm (2 inches). Allow full chest recoil after every compression without leaning on the chest. Maintain the steady 110 BPM metronome rhythm.',
+        image: '/assets/cpr-step-03-chest-compressions.jpg',
         hasMetronome: true,
         metronomeBpm: 110,
         hasTimer: true,
@@ -108,13 +48,73 @@ export const PROTOCOLS: Record<string, ProtocolDefinition> = {
       },
       {
         stepNumber: 4,
-        title: 'Do Not Stop Compressions',
-        body: 'Continue chest compressions without pausing. If another bystander is nearby, switch every 2 minutes without delaying.',
+        title: 'AED Pad Placement & Shock',
+        body: 'As soon as an AED is available, turn it on. Attach Pad 1 to upper right chest below the clavicle and Pad 2 to lower left ribcage. Stand clear while the AED analyzes cardiac rhythm, and deliver shock if advised before resuming CPR.',
+        image: '/assets/cpr-step-04-aed-defibrillation.jpg',
+      },
+    ],
+  },
+  choking: {
+    id: 'choking',
+    emergencyType: 'Choking / Foreign Body Airway Obstruction',
+    title: 'Choking Relief: Heimlich Maneuver',
+    category: 'choking',
+    steps: [
+      {
+        stepNumber: 1,
+        title: 'Identify Severe Airway Obstruction',
+        body: 'If the person cannot speak, cough forcefully, or breathe and is clutching their throat, immediately ask "Are you choking?" and position yourself directly behind them.',
+        image: '/assets/emergency-rescue-heimlich-choking.jpg',
       },
       {
-        stepNumber: 5,
-        title: 'Prepare for Crew Arrival',
-        body: 'Keep compressing until the ambulance crew arrives with the defibrillator (AED) and instructs you to stop.',
+        stepNumber: 2,
+        title: 'Fist Placement & Upward J-Thrusts',
+        body: 'Make a fist with one hand and place the thumb-side just above the navel, well below the breastbone. Grasp your fist with your other hand and deliver quick, inward and upward abdominal J-thrusts until the obstruction is expelled.',
+        image: '/assets/emergency-rescue-heimlich-choking.jpg',
+        hasTimer: true,
+        timerDurationSeconds: 60,
+      },
+    ],
+  },
+  bleeding: {
+    id: 'bleeding',
+    emergencyType: 'Heavy Bleeding / Arterial Hemorrhage',
+    title: 'Severe Bleeding Control & Tourniquet',
+    category: 'bleeding',
+    steps: [
+      {
+        stepNumber: 1,
+        title: 'Apply Tourniquet or Firm Direct Pressure',
+        body: 'For life-threatening extremity bleeding, apply a tactical windlass tourniquet 2–3 inches above the wound (never over a joint). Tighten the windlass rod until the arterial bleeding completely stops, and lock it into the clip.',
+        image: '/assets/emergency-rescue-tourniquet-bleeding.jpg',
+        hasTimer: true,
+        timerDurationSeconds: 180,
+      },
+      {
+        stepNumber: 2,
+        title: 'Record Time & Never Loosen',
+        body: 'Write the application time clearly on the tourniquet time tab. Keep the patient warm and lying down to prevent trauma shock. Never loosen or remove a tourniquet once applied.',
+        image: '/assets/emergency-rescue-tourniquet-bleeding.jpg',
+      },
+    ],
+  },
+  unconscious: {
+    id: 'unconscious',
+    emergencyType: 'Unresponsive but Breathing Normally',
+    title: 'Recovery Position & Airway Protection',
+    category: 'recovery',
+    steps: [
+      {
+        stepNumber: 1,
+        title: 'Verify Normal Breathing',
+        body: 'If the patient is unconscious but breathing regularly, roll them onto their side into the recovery position to prevent airway obstruction or aspiration.',
+        image: '/assets/emergency-rescue-recovery-position.jpg',
+      },
+      {
+        stepNumber: 2,
+        title: 'Stabilize Body & Angle Mouth Downward',
+        body: 'Bend the upper leg at a 90° angle to anchor the body. Place the upper hand under the tilted cheek to maintain head alignment and ensure fluids drain freely from the mouth.',
+        image: '/assets/emergency-rescue-recovery-position.jpg',
       },
     ],
   },
